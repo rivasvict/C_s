@@ -16,6 +16,12 @@ var firstkfib = function(k) {
 	return arr;
 };
 
+//Another simplified way to calculate them
+var fibonacci2 = function(n){
+	var phi = (1 + Math.sqrt(5))/2;
+	return Math.round((Math.pow(phi, n) - Math - pow(1-phi, n))/Math.sqrt(5));
+};
+
 //Printing to console
 var ftm = function(arr){
 	return arr.join(" ");
