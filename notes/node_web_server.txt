@@ -1,0 +1,17 @@
+How to build a node.js server
+----------------------------
+
+	- Building a simple server saying hello world.
+
+		1. Create a server.js file with this content:
+
+			var http = require('http')						//Calling the HTTP node module
+				http.createServer(function (req, res){
+					res.writeHead(200, {'Content-Type': 'text/plain'});
+					res.end('hello world\n');
+			}).listen(1337, '127.0.0.1');						//Seting the port
+			console.log('Server running at http://127.0.0.1:1337/');
+		
+		2. Save the file above and run "http://127.0.0.1:1337" on your web browser.
+
+	- Runing an index file using
