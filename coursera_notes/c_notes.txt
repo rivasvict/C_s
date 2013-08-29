@@ -1,0 +1,65 @@
+The three streams.
+
+These three streams are standard channels connected between a computer and a program.
+
+- These three standard are:
+
+	STDIN: It represents all inputs given to a program.
+	STDOUT: It represent all the responses froma a program.
+	STDERR: Where errors are represented.
+
+	Using STDIN:
+
+		To use STDIN, type:
+
+			$ [comman_input] > my_file_input.txt
+
+		NOTE: The ">" symbol by itself means that we are appeding our STDIN to a my_file.txt
+
+	Using STDOUT:
+
+		To use STDOUT, type:
+
+			$ [command_input] 1> my_file_out.txt
+
+		NOTE: This command is used to send the output to a file called "my_file_out.txt"
+
+	Using STDERR:
+
+		To use STDERR, type:
+
+			$ [command_input] 2> my_file_err.txt
+
+		NOTE: By using this command you are sending the error messages to a file called my_file_err.txt
+
+	NOTE: As you can see there is a "2" before the ">" this number tells the program which one of the streams append to the file
+		- If there is not number, use just ">" it means that the stream to use is STDIN
+		- If there is a numbre "1" before ">" it mebas that the standard to use is STDOUT.
+		- If there is a number "2" before ">" it means that the stream to use is STDERR
+
+	We can append 2 of those standards to two different files at the same time
+
+		$ [command] [input] 1> [my_file_out].txt 2> [my_file_err].txt
+
+	We can also put both STDIN and STDOUT in the same file
+
+		$ [command] [input] &> out.txt
+-------------------------------------------------------------------
+
+The "head" command
+
+- This command is used to show the first lines of a file
+
+	You can pass an argument "-n" indicating the number of lines that we want to show
+
+	$ cat [my_file].txt | head -n 3
+
+	the result of this command are the first 3 lines of the file: "my_file.txt" 
+
+-------------------------------------------------------------------
+
+Command "cat"
+
+- This command is used to open and see a file.
+
+

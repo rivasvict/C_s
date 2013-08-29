@@ -14,4 +14,8 @@ How to build a node.js server
 		
 		2. Save the file above and run "http://127.0.0.1:1337" on your web browser.
 
-	- Runing an index file using
+----------------------------------------------------------------------------------------------
+
+	- Runing an index file using the connect module.
+
+		
