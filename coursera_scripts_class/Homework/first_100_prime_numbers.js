@@ -26,6 +26,6 @@ var pmt = function(arr){
 	return arr.join(" ");
 };
 
-var k = 100;
-console.log("firstprime(" + k + ")");
+var k = 40;
+console.log("Estos son los primeros (" + k + ") numeros primos");
 console.log(pmt(firstprime(k)));

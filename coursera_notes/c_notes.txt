@@ -62,4 +62,22 @@ Command "cat"
 
 - This command is used to open and see a file.
 
+-------------------------------------------------------------------
+
+Using the "-alrth" parameter with the "ls" command
+
+	- Use this command to se all metadata of a file or directory.
+
+	$ ls -alrth [my_file_name]
+
+-------------------------------------------------------------------
+
+Command "alias"
+
+	- This command is used to create an alias of a command.
+
+	$ alias [alias_name]='[command]'
+
+-------------------------------------------------------------------
+
 
