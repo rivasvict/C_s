@@ -80,4 +80,32 @@ Command "alias"
 
 -------------------------------------------------------------------
 
+Command "nl"
+
+	- This command is used to count number of lines
+
+	$ command | nl | command
+
+Example
+
+	$ yes | nl | head -10
+
+-------------------------------------------------------------------
+
+Command ln
+
+	- This command create a representative link between the [file_name_of_the_link] given and the file to link
+
+	$ ln -sf [original_file_name] [link_file_name]
+
+-------------------------------------------------------------------
+
+Command rsync
+
+	- Wth this command you are going to be able to transfer files between two machines.
+
+	$ rsync -avp [my_file_name_to_transfer_from_this_machine] [domain_or_address_of_a_remote_machine]:target/route/in/the/remote/machine
+
+-------------------------------------------------------------------
+
 
