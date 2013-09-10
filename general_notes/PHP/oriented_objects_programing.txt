@@ -1,0 +1,52 @@
+-----------------------------Oriented object programming-----------------------------------
+
+- Class.
+
+A class is a group of functions and properties that have similar caracteristics.
+
+	A class can be initialized by:
+
+		class Name_of_my_class{
+			//here are the properties and methods of the class	
+		}
+
+- Object.
+
+An object is an instance of a class.
+A class can isntance one or many different objects with different properties and functions
+
+	An object can be created by:
+
+		$obj = new Name_of_my_class;
+
+	NOTE: As you can see the object is instanced by the class "Name_of_myclass" that we created previously
+
+- Properties.
+
+Properties are those atributes that an object could have. For instance: If we set a car as an object, its properties are the color, model, number of doors and so on.
+
+	Properties are set by the following sintax:
+
+		public $name_of_my_property1 = [the_value_of_my_property1];
+
+	NOTE: The "public" keyword makes reference to the visibility of the the property.
+
+	- Calling a property by an object.
+
+		$obj->name_of_my_property;
+
+	NOTE: In case that there is a need on using a property inside the same class you call it using the keyword "$this" instead "$obj" which is our previously created object. This is because all objects should be instanced outside of te class.
+
+- Methods or functions.
+
+Methods of functions are those operations that need to be applied in a program.
+
+	- Creating a function.
+
+		public function My_function(){
+			//operation of my fucntion
+		}
+
+	- Calling a function from an object.
+
+		$obj->My_function();
