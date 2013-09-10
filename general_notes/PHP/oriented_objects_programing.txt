@@ -50,3 +50,36 @@ Methods of functions are those operations that need to be applied in a program.
 	- Calling a function from an object.
 
 		$obj->My_function();
+
+- Special methods or magic methods
+
+	- Construct:
+
+		This method is special because is automatically trigged everytime that an object is instanced.
+
+		The sintaxis to create this method is:
+
+			public function __construct(){
+				//Here you can set instructions that you want to execute
+			}
+
+	- Destruct:
+
+		This method is trigged once the object is destroyed and is useful for closing prosess
+
+		The sintaxis to create this method is:
+
+			public function __destruct(){
+				//Here you can set instructions that you want to execute one an object is destroyed
+			}
+
+	- Unset:
+
+		Normally an object is destroyed once all script is run. This method allow us to destroy an object before the whole script is completely run.
+
+		This means that if we set a __destruct() method before, it will be trigget as soon as unset() is executed.
+
+		The sintax for this method is:
+
+			unset($obj);
+
