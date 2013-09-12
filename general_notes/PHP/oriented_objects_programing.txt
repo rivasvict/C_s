@@ -83,3 +83,21 @@ Methods of functions are those operations that need to be applied in a program.
 
 			unset($obj);
 
+---------------------------------------------------------------------------------------------------------------------------------
+
+Inheritance
+
+	Inheritance is the ability of a class to use, overwrite and add properties or methods from a parent class.
+
+	To inherit a class from a parent we use the keyword "extends"
+
+	Creating an inherited class ("MyNewClass") which inherit methods and properties from a parent class called "MyParentClass":
+
+		class MyNewClass extends MyParentClass{
+			//methods and properties go here
+			//This class can call properties and methods from the class MyParentClass
+		}
+
+	NOTE: In this case we asume that a parent class (MyParentClass) was created previously and has its own metods and properties that are aviable to use with an extended class ("MyNewClass")
+
+----------------------------------------------------------------------------------------------------------------------------------
