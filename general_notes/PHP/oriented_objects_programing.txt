@@ -133,7 +133,7 @@ Overwritting a method without losing exsistent instructions in the parent class.
 	A practical example:
 
                 class parent{ 
-                        $property1 = OriginalValue;  
+                        public $property1 = OriginalValue;  
 
                         public function Method1(){ 
                                 //Original instructions
@@ -141,7 +141,7 @@ Overwritting a method without losing exsistent instructions in the parent class.
                 }
 
                 class child extends parent{
-                        $property1 = ModifiedValue;//The value of this property is modified or overwritten
+                        public $property1 = ModifiedValue;//The value of this property is modified or overwritten
 
                         public function method2(){
 				parent::method1();//Calling the instructions of "method1()"
@@ -164,7 +164,7 @@ Methods and properties visibility
 	Private example:
 
 		class classParent{
-			$property = value;
+			public $property = value;
 
 			private function parentMethod(){
 				//intructions from the parent method
@@ -178,7 +178,7 @@ Methods and properties visibility
 	Protected example:
 
 		class classParent{ 
-                        $property = value;
+                        public $property = value;
 
                         protected function parentMethod(){ 
                                 //intructions from the parent method
@@ -188,7 +188,7 @@ Methods and properties visibility
 		// To acess to that protected function called parentMethod() we have to create a extended class with a public method to call the private method of the classParent
 
 		class classChild extends classParent{
-			$property_child = value_child;
+			public $property_child = value_child;
 
 			public function callingParentMethod(){
 				return $this->parentMethod();
@@ -201,3 +201,29 @@ Methods and properties visibility
 
 		$object->callingParentMethod();
 ------------------------------------------------------------------------------------------------------------------------------------
+
+Static methods and properties
+
+	Static methods or properties can keep stored values for the duration of te script.
+	They can be called without instancing the class that they bellong to. To acess to this kind properties or methods you can use the scope resolution operator(::)
+	
+	Sintax for methods: 
+
+		NameOfMyClass::NameOfMyMethod();
+
+	Sintax for properties:
+
+		NameOfMyClass::$NameOfTheProperty;
+
+	Interactive example:
+
+		class parentClass{
+			public static $property = value;
+
+			public static parentMethod(){
+				//Instructions of parent method
+			}
+		}
+
+		parentClass::$property;//Calling the $property value
+		parentClass::parentMethod();//Calling the parentMethod() instructions.
