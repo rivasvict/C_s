@@ -100,4 +100,52 @@ Inheritance
 
 	NOTE: In this case we asume that a parent class (MyParentClass) was created previously and has its own metods and properties that are aviable to use with an extended class ("MyNewClass")
 
-----------------------------------------------------------------------------------------------------------------------------------
+Overwritting a mehod or property
+
+	Extended classes can overwrite a method property from a parent class by creating a property or method with the same name of it in the extended class.
+
+		class parent{
+			$property1 = OriginalValue;
+
+			public function Method1(){
+				//Original instructions
+			}
+		}
+
+		class child extends parent{
+			$property1 = ModifiedValue;//The value of this property is modified or overwritten
+
+			public function method1(){
+				//Modified or overwitten instructions from "parent" class
+			}
+		}
+
+Overwritting a method without losing exsistent instructions in the parent class.
+
+	To overwrite a methot from a parent class without losing any instruction we use the SCOPE RESOLUTION OPERATION (::) and the keyword parent.
+
+	The sintax to call it is:
+
+		public method(){
+			parent::parent_method();
+		}
+
+	A practical example:
+
+                class parent{ 
+                        $property1 = OriginalValue;  
+
+                        public function Method1(){ 
+                                //Original instructions
+                        }
+                }
+
+                class child extends parent{
+                        $property1 = ModifiedValue;//The value of this property is modified or overwritten
+
+                        public function method2(){
+				parent::method1();//Calling the instructions of "method1()"
+                                //Modified or overwitten instructions from "parent" class
+                        }
+                }
+	
