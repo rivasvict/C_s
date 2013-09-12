@@ -149,3 +149,55 @@ Overwritting a method without losing exsistent instructions in the parent class.
                         }
                 }
 	
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Methods and properties visibility
+
+	Te visibility defines how a property or a method can be accesed by an object.
+
+	There are three levels.
+
+		- Public: 	A property or method can be accesed by any object from anywhere.
+		- Private:	A property or method can be only accesed by objects instanced by the same class that they bellong to
+		- Protected:	A property or method can be only accesed by onjects instanced by the same class that they bellong to and extended classes (In this sence if you want to use a method declarated as protected from outside of the clas that it bellogs to. You need to create a public method in the extended class that calls to the protected method that we need to use)
+
+	Private example:
+
+		class classParent{
+			$property = value;
+
+			private function parentMethod(){
+				//intructions from the parent method
+			}
+		}
+
+		$object = new classParent;
+
+		$object->parentMethod();// This is the only way to call a private function or method
+
+	Protected example:
+
+		class classParent{ 
+                        $property = value;
+
+                        protected function parentMethod(){ 
+                                //intructions from the parent method
+                        }
+                }
+
+		// To acess to that protected function called parentMethod() we have to create a extended class with a public method to call the private method of the classParent
+
+		class classChild extends classParent{
+			$property_child = value_child;
+
+			public function callingParentMethod(){
+				return $this->parentMethod();
+			}
+		}
+
+		// And then you are allow to use the parentMethod by means of callingParentMethod from outside of the class "classParent"
+
+		$oject = new classChild;
+
+		$object->callingParentMethod();
+------------------------------------------------------------------------------------------------------------------------------------
