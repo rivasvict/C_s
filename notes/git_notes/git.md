@@ -13,6 +13,12 @@ Checking existng keys on your computer
 	$ ls
 	#Showing previous ssh keys added on your computer
 
+	**NOTE**: If the directory "~/.ssh" does not exist, create it by:
+
+	$ mkdir ~/.ssh
+	#Creating the "~/.ssh" directory
+	#This command should be performed before beginning the whole process ONLY if you notice that there is not the "~/.ssh" directory 
+
 - **STEP 2**: Generate your ssh key for github
 
 Generating a new ssh on your computer
