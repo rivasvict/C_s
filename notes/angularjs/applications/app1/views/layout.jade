@@ -1,0 +1,18 @@
+doctype 5
+html(ng-app)
+  head
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js")
+    script(src="javascripts/calculo.js")
+  body
+    div(id="input", ng-controller="calculoJS")
+      span()
+        | Inserte el monto:
+      select(ng-model="option")
+        option(id=1)
+          | Base
+        option(id=2)
+          | Total
+      form(ng-submit="testing()")
+        input(type="text", placeholder="Inserte valor aqui", ng-model="value")
+        input(type="submit", value="Make a calc")
+      {{ch}}
