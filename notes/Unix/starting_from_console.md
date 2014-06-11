@@ -6,25 +6,29 @@ Some notes about:
  
 	1- How to disable GUI for user session at linux startup (login with linux console directly)
 
-		DEBIAN:
+	DEBIAN:
 		Install rcconfig from repositories and disable gdm
 		
 		- Open rcconfig go to gdm and disable it with barspace, then press enter.
 		
-		FEDORA
+	FEDORA
 		- There is no need to execute rconfig, Just run this as root:
-		```
+
 		# systemctl disable gdm.service
-		```
 
 	2- Create a file called .xinitrc and append:
 
-		exec fluxboxstar
+	```
+	exec fluxboxstar
+	```
+	or
+	```
+	exec dwm
+	```
 
-		or
-
-		exec dwm
-
-	3- rund command: startx
+	3- Login and run command:
+	```
+	$ startx
+	```
 
 	DONE!
