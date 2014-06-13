@@ -1,22 +1,3 @@
-Node file manipulation.
-======================
-
-How to read each line of a file and put it inside an array.
-----------------------------------------------------------
-
-- 1 Install fs module from npm
-
-	```javascript
-	$ npm install node-fs
-	```
-
-	
-
-- 2 Create a new node script "fChecker.js"
-
-- 3 In "fChequer.js" write the following:
-
-	```javascript
 	//Require file system management module
 	var fs = require('fs');
 	//Create an empty array to store all of the lines
@@ -65,4 +46,3 @@ How to read each line of a file and put it inside an array.
 
 	var input = fs.createReadStream(__dirname + '/node_file_manipulation.md');
 	var file = readLines(input,func);
-	```
