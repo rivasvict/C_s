@@ -69,28 +69,28 @@ How to read each line of a file and put it inside an array.
 
 Lets explain 3 of the lines that might seem confusing
 
-	```javascript
+```javascript
 	var input = fs.createReadStream(__dirname + '/node_file_manipulation');
-	```
+```
 
-		This creates a new read stream object and set its value to the input variable.
+	This creates a new read stream object and set its value to the input variable.
 
-		- Readable stream
+	- Readable stream
 
-			It is an abstraction of a source of data. In other words a representation of a file metadata and content in this case.
-			Some event listeners can be added to it and executed due to some rules that comes from this object. We will cover that later.
+		It is an abstraction of a source of data. In other words a representation of a file metadata and content in this case.
+		Some event listeners can be added to it and executed due to some rules that comes from this object. We will cover that later.
 
-			to read more (in detail) about stream object you can visit nodejs documentation [here](http://nodejs.org/api/fs.html#fs_fs_createreadstream_path_options) at 'fs.createReadStream(path, [options])' explanation.
+		to read more (in detail) about stream object you can visit nodejs documentation [here](http://nodejs.org/api/fs.html#fs_fs_createreadstream_path_options) at 'fs.createReadStream(path, [options])' explanation.
 
-	```javascript
-		input.on('data',function(data){
-	```
+```javascript
+	input.on('data',function(data){
+```
 
-		As you might know .on() method attaches data to the stream and pass it to a handler function which is required in the next parameter. This function receives the data of our source as buffer that can be dedoded into a string (as a parameter). The handler function is triggered as soon as data is attached to the stream  by means of .on() method.
+	As you might know .on() method attaches data to the stream and pass it to a handler function which is required in the next parameter. This function receives the data of our source as buffer that can be dedoded into a string (as a parameter). The handler function is triggered as soon as data is attached to the stream  by means of .on() method.
 
-	```javascript
-		input.on('end',function(){
-	```
+```javascript
+	input.on('end',function(){
+```
 
 	'end' is attached to the stream (read stream object) and it will be executed as soon as the last element of buffer is processed by 'data'.
 	**NOTE: ** You must have 'data' attached first.
