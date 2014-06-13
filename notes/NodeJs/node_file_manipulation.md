@@ -93,7 +93,8 @@ As you might know .on() method attaches data to the stream and pass it to a hand
 ```
 
 'end' is attached to the stream (read stream object) and it will be executed as soon as the last element of buffer is processed by 'data'.
-**NOTE: ** You must have 'data' attached first.
+
+**NOTE:** You must have 'data' attached first.
 
 To read more about this event listener and other ones check nodeJs documentation [here](http://nodejs.org/api/stream.html#stream_class_stream_readable) at 'API for Stream Consumers`.
 
